@@ -37,8 +37,12 @@ function getGreeting(user?: User) {
 }
 
 const element1 = <h1 className="greeting">Hello, world!</h1>
-
+const element2 = React.createElement(
+    'h1',
+    { className: 'greeting' },
+    "Hello, world 2!"
+)
 ReactDOM.render(
-    element1,
+    element2,
     document.getElementById('root')
 )

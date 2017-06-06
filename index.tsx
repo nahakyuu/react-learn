@@ -17,32 +17,15 @@ function formatName(user: User) {
     return `${user.firstName} ${user.lastName}`
 }
 
-const xssTestText = '<script>alert("xss")</script>'
-function getGreeting(user?: User) {
-    if (user) {
-        const element = <img src={user.avatarUrl} />
-        return (
-            <div>
-                <h1>{element}Hello, {formatName(user)}!</h1>
-                <h2>Good to see you here.</h2>
-            </div>
-        )
-    }
-    return (
+function tick() {
+    const element =
         <div>
-            <h1>Hello, Stranger.</h1>
-            <div>{xssTestText}</div>
+            <h1>Hello, world!</h1>
+            <h2>It is {new Date().toLocaleTimeString()}.</h2>
         </div>
+    ReactDOM.render(
+        element,
+        document.getElementById('root')
     )
 }
-
-const element1 = <h1 className="greeting">Hello, world!</h1>
-const element2 = React.createElement(
-    'h1',
-    { className: 'greeting' },
-    "Hello, world 2!"
-)
-ReactDOM.render(
-    element2,
-    document.getElementById('root')
-)
+setInterval(tick, 1000)

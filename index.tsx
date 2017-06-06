@@ -21,8 +21,17 @@ function Welcome(props: { name: string }) {
     return <h1>Hello, {props.name}</h1>
 }
 
-const element = <Welcome name="aroa" />
+function App() {
+    return (
+        <div>
+            <Welcome name="aroa" />
+            <Welcome name="aoi" />
+            <Welcome name="apple" />
+        </div>
+    )
+}
+
 ReactDOM.render(
-    element,
+    <App />,
     document.getElementById('root')
 )

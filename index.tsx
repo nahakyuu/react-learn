@@ -17,6 +17,7 @@ function formatName(user: User) {
     return `${user.firstName} ${user.lastName}`
 }
 
+const xssTestText = '<script>alert("xss")</script>'
 function getGreeting(user?: User) {
     if (user) {
         const element = <img src={user.avatarUrl} />
@@ -27,7 +28,12 @@ function getGreeting(user?: User) {
             </div>
         )
     }
-    return <h1>Hello, Stranger.</h1>
+    return (
+        <div>
+            <h1>Hello, Stranger.</h1>
+            <div>{xssTestText}</div>
+        </div>
+    )
 }
 
 ReactDOM.render(

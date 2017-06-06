@@ -1,0 +1,23 @@
+{
+  "name": "react-learn",
+  "version": "1.0.0",
+  "author": {
+    "name": "aroa",
+    "email": "root@aroa.me"
+  },
+  "scripts": {
+    "prestart": "start /b tsc -w",
+    "start": "lite-server"
+  },
+  "dependencies": {
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "requirejs": "^2.3.3"
+  },
+  "devDependencies": {
+    "lite-server": "^2.3.0",
+    "typescript": "^2.3.4",
+    "@types/react": "^15.0.26",
+    "@types/react-dom": "^15.5.0"
+  }
+}

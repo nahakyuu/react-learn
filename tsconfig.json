@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "umd",
+    "sourceMap": true,
+    "strictNullChecks": true,
+    "lib": [
+      "dom",
+      "es5"
+    ],
+    "jsx": "react",
+    "strict": true
+  }
+}

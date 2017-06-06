@@ -20,7 +20,12 @@ function formatName(user: User) {
 function getGreeting(user?: User) {
     if (user) {
         const element = <img src={user.avatarUrl} />
-        return <h1>{element}Hello, {formatName(user)}!</h1>
+        return (
+            <div>
+                <h1>{element}Hello, {formatName(user)}!</h1>
+                <h2>Good to see you here.</h2>
+            </div>
+        )
     }
     return <h1>Hello, Stranger.</h1>
 }

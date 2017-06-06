@@ -36,7 +36,9 @@ function getGreeting(user?: User) {
     )
 }
 
+const element1 = <h1 className="greeting">Hello, world!</h1>
+
 ReactDOM.render(
-    Math.random() > 0.5 ? getGreeting(user) : getGreeting(),
+    element1,
     document.getElementById('root')
 )

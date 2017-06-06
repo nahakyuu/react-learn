@@ -8,33 +8,42 @@ function Welcome(props: { name: string }) {
 function formatDate(date: Date) {
     return date.toLocaleDateString()
 }
-
+interface AuthorProp {
+    name: string
+    avatarUrl: string
+}
 interface CommentProp {
-    author: {
-        name: string
-        avatarUrl: string
-    }
+    author: AuthorProp
     text: string
     date: Date
 }
-
-function Comment(props: CommentProp) {
+function Avatar(author: AuthorProp) {
+    return (
+        <img className="Avatar"
+            src={author.avatarUrl}
+            alt={author.name}
+        />
+    )
+}
+function UserInfo(author: AuthorProp) {
+    return (
+        <div className="UserInfo">
+            <Avatar {...author} />
+            <div className="UserInfo-name">
+                {author.name}
+            </div>
+        </div>
+    )
+}
+function Comment(comment: CommentProp) {
     return (
         <div className="Comment">
-            <div className="UserInfo">
-                <img className="Avatar"
-                    src={props.author.avatarUrl}
-                    alt={props.author.name}
-                />
-                <div className="UserInfo-name">
-                    {props.author.name}
-                </div>
-            </div>
+            <UserInfo {...comment.author} />
             <div className="Comment-text">
-                {props.text}
+                {comment.text}
             </div>
             <div className="Comment-date">
-                {formatDate(props.date)}
+                {formatDate(comment.date)}
             </div>
         </div>
     )

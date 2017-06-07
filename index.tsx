@@ -13,9 +13,14 @@ interface AuthorProp {
     name: string
     avatarUrl: string
 }
+
 interface CommentProp {
     author: AuthorProp
     text: string
+    date: Date
+}
+
+interface DateProp {
     date: Date
 }
 
@@ -61,8 +66,11 @@ const comment: CommentProp = {
         avatarUrl: 'http://1.gravatar.com/avatar/6141af411a46e8732f95129f49be620b'
     }
 }
+function FormattedDate(props: DateProp) {
+    return <h2>It is {props.date.toLocaleTimeString()}</h2>
+}
 
-class Clock extends React.Component<{}, { date: Date }> {
+class Clock extends React.Component<{}, DateProp> {
     timerID: number
     constructor(props: {}) {
         super(props)
@@ -72,7 +80,7 @@ class Clock extends React.Component<{}, { date: Date }> {
         return (
             <div>
                 <h1>Hello, world!</h1>
-                <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
+                <FormattedDate date={this.state.date} />
             </div>
         )
     }

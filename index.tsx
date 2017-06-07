@@ -79,7 +79,6 @@ class Clock extends React.Component<{}, DateProp> {
     render() {
         return (
             <div>
-                <h1>Hello, world!</h1>
                 <FormattedDate date={this.state.date} />
             </div>
         )
@@ -103,7 +102,18 @@ class Clock extends React.Component<{}, DateProp> {
     }
 }
 
+function App() {
+    return (
+        <div>
+            <h1>Hello, world!</h1>
+            <Clock />
+            <Clock />
+            <Clock />
+        </div>
+    )
+}
+
 ReactDOM.render(
-    <Clock />,
+    <App />,
     document.getElementById('root')
 )

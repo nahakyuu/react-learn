@@ -8,6 +8,7 @@ function Welcome(props: { name: string }) {
 function formatDate(date: Date) {
     return date.toLocaleDateString()
 }
+
 interface AuthorProp {
     name: string
     avatarUrl: string
@@ -17,6 +18,7 @@ interface CommentProp {
     text: string
     date: Date
 }
+
 function Avatar(author: AuthorProp) {
     return (
         <img className="Avatar"
@@ -25,6 +27,7 @@ function Avatar(author: AuthorProp) {
         />
     )
 }
+
 function UserInfo(author: AuthorProp) {
     return (
         <div className="UserInfo">
@@ -35,6 +38,7 @@ function UserInfo(author: AuthorProp) {
         </div>
     )
 }
+
 function Comment(comment: CommentProp) {
     return (
         <div className="Comment">
@@ -58,7 +62,20 @@ const comment: CommentProp = {
     }
 }
 
-ReactDOM.render(
-    <Comment {...comment} />,
-    document.getElementById('root')
-)
+function Clock(props: { date: Date }) {
+    return (
+        <div>
+            <h1>Hello, world!</h1>
+            <h2>It is {props.date.toLocaleTimeString()}.</h2>
+        </div>
+    )
+}
+
+function tick() {
+    ReactDOM.render(
+        <Clock date={new Date()} />,
+        document.getElementById('root')
+    )
+}
+
+setInterval(tick, 1000)

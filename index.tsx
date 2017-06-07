@@ -63,6 +63,7 @@ const comment: CommentProp = {
 }
 
 class Clock extends React.Component<{}, { date: Date }> {
+    timerID: number
     constructor(props: {}) {
         super(props)
         this.state = { date: new Date() }
@@ -74,6 +75,23 @@ class Clock extends React.Component<{}, { date: Date }> {
                 <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
             </div>
         )
+    }
+
+    tick() {
+        this.setState({
+            date: new Date()
+        })
+    }
+
+    componentDidMount() {
+        this.timerID = setInterval(
+            () => this.tick(),
+            1000
+        )
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.timerID);
     }
 }
 

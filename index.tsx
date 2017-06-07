@@ -102,13 +102,25 @@ class Clock extends React.Component<{}, DateProp> {
     }
 }
 
+function ActionLink() {
+    function handleClick(e: React.MouseEvent<HTMLAnchorElement>) {
+        e.preventDefault()
+        alert('The link was clicked')
+    }
+
+    return (
+        <a href="#" onClick={handleClick}>
+            Click me
+        </a>
+    )
+}
+
 function App() {
     return (
         <div>
             <h1>Hello, world!</h1>
             <Clock />
-            <Clock />
-            <Clock />
+            <ActionLink />
         </div>
     )
 }

@@ -24,6 +24,12 @@ interface DateProp {
     date: Date
 }
 
+type DateState = DateProp
+
+interface ToggleState {
+    isToggleOn: boolean
+}
+
 function Avatar(author: AuthorProp) {
     return (
         <img className="Avatar"
@@ -70,7 +76,7 @@ function FormattedDate(props: DateProp) {
     return <h2>It is {props.date.toLocaleTimeString()}</h2>
 }
 
-class Clock extends React.Component<{}, DateProp> {
+class Clock extends React.Component<{}, DateState> {
     timerID: number
     constructor(props: {}) {
         super(props)
@@ -115,12 +121,32 @@ function ActionLink() {
     )
 }
 
+class Toggle extends React.Component<{}, ToggleState> {
+    constructor(props: {}) {
+        super(props)
+        this.state = { isToggleOn: true }
+
+        this.handleClick = this.handleClick.bind(this)
+    }
+
+    handleClick() {
+        this.setState(prevState => ({
+            isToggleOn: !prevState.isToggleOn
+        }))
+    }
+    render() {
+        return (
+            <button onClick={this.handleClick}>
+                {this.state.isToggleOn ? 'ON' : 'OFF'}
+            </button>
+        )
+    }
+}
+
 function App() {
     return (
         <div>
-            <h1>Hello, world!</h1>
-            <Clock />
-            <ActionLink />
+            <Toggle />
         </div>
     )
 }

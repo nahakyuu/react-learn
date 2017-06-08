@@ -1,18 +1,14 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 
-import { Greeting } from './Greeting'
 import { Toggle } from './Toggle'
 import { Clock } from './Clock'
 import { ActionLink } from './ActionLink'
+import { LoginControl } from './LoginControl'
 
 function App() {
     return (
-        <div>
-            <Greeting isLoggedIn={true} />
-            <Clock />
-            <Toggle />
-        </div>
+        <LoginControl />
     )
 }
 

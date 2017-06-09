@@ -8,10 +8,11 @@ import { LoginControl } from './LoginControl'
 import { MailBoxWarp } from './MailBox'
 import { Page } from './Page'
 import { NumberListWarp } from './List'
+import { BlogWarp } from './Blog'
 
 function App() {
     return (
-        <NumberListWarp />
+        <BlogWarp />
     )
 }
 

@@ -18,3 +18,11 @@ export function NumberListWarp() {
         <NumberList numbers={numbers} />
     )
 }
+
+const todos: { id: number, text: string }[] = []
+
+const todoItems = todos.map(todo =>
+    <li key={todo.id}>
+        {todo.text}
+    </li>
+)

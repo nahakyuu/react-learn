@@ -39,17 +39,13 @@ export class LoginControl extends React.Component<{}, { isLoggedIn: boolean }> {
     render() {
         const isLoggedIn = this.state.isLoggedIn
 
-        let button: React.ReactElement<OnClickProp<HTMLButtonElement>>
-        if (isLoggedIn) {
-            button = <LogoutButton onClick={this.handleLogoutClick} />
-        } else {
-            button = <LogoutButton onClick={this.handleLoginClick} />
-        }
-
         return (
             <div>
                 <Greeting isLoggedIn={isLoggedIn} />
-                {button}
+                {isLoggedIn
+                    ? <LogoutButton onClick={this.handleLogoutClick} />
+                    : <LogoutButton onClick={this.handleLoginClick} />
+                }
             </div>
         )
     }

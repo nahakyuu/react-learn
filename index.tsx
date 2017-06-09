@@ -9,7 +9,7 @@ import { MailBoxWarp } from './MailBox'
 
 function App() {
     return (
-        <MailBoxWarp />
+        <LoginControl />
     )
 }
 

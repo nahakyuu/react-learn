@@ -10,8 +10,9 @@ function GuestGreeting() {
 
 export function Greeting(props: { isLoggedIn: boolean }) {
     const isLoggedIn = props.isLoggedIn
-    if (isLoggedIn) {
-        return <UserGreeting />
-    }
-    return <GuestGreeting />
+    return (
+        <div>
+            The user is <b>{isLoggedIn ? 'currently' : 'not'}</b> logged in.
+        </div>
+    )
 }

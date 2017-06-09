@@ -6,10 +6,11 @@ import { Clock } from './Clock'
 import { ActionLink } from './ActionLink'
 import { LoginControl } from './LoginControl'
 import { MailBoxWarp } from './MailBox'
+import { Page } from './Page'
 
 function App() {
     return (
-        <LoginControl />
+        <Page />
     )
 }
 

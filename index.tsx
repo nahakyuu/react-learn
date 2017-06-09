@@ -5,10 +5,11 @@ import { Toggle } from './Toggle'
 import { Clock } from './Clock'
 import { ActionLink } from './ActionLink'
 import { LoginControl } from './LoginControl'
+import { MailBoxWarp } from './MailBox'
 
 function App() {
     return (
-        <LoginControl />
+        <MailBoxWarp />
     )
 }
 

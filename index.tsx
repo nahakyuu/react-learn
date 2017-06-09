@@ -11,10 +11,11 @@ import { NumberListWarp } from './List'
 import { BlogWarp } from './Blog'
 import { NameForm } from './Forms/NameForm'
 import { EssayForm } from './Forms/EssayForm'
+import { FlavorForm } from './Forms/FlavorForm'
 
 function App() {
     return (
-        <EssayForm />
+        <FlavorForm />
     )
 }
 

@@ -9,10 +9,11 @@ import { MailBoxWarp } from './MailBox'
 import { Page } from './Page'
 import { NumberListWarp } from './List'
 import { BlogWarp } from './Blog'
+import { NameForm } from './Forms/NameForm'
 
 function App() {
     return (
-        <NumberListWarp />
+        <NameForm />
     )
 }
 

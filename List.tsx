@@ -9,12 +9,15 @@ function ListItem(props: { value: number }) {
 
 function NumberList(props: { numbers: number[] }) {
     const numbers = props.numbers
-    const listItems = numbers.map(number =>
-        <ListItem key={number} value={number} />
-    )
-
+    
     return (
-        <ul>{listItems}</ul>
+        <ul>
+            {
+                numbers.map(number =>
+                    <ListItem key={number} value={number} />
+                )
+            }
+        </ul>
     )
 }
 

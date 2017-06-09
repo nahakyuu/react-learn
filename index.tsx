@@ -12,7 +12,7 @@ import { BlogWarp } from './Blog'
 
 function App() {
     return (
-        <BlogWarp />
+        <NumberListWarp />
     )
 }
 

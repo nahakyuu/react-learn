@@ -12,10 +12,11 @@ import { BlogWarp } from './Blog'
 import { NameForm } from './Forms/NameForm'
 import { EssayForm } from './Forms/EssayForm'
 import { FlavorForm } from './Forms/FlavorForm'
+import { Reservation } from './Forms/Reservation'
 
 function App() {
     return (
-        <FlavorForm />
+        <Reservation />
     )
 }
 

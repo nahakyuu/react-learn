@@ -7,11 +7,11 @@ import { ActionLink } from './ActionLink'
 import { LoginControl } from './LoginControl'
 import { MailBoxWarp } from './MailBox'
 import { Page } from './Page'
-import { List } from './List'
+import { NumberListWarp } from './List'
 
 function App() {
     return (
-        <List />
+        <NumberListWarp />
     )
 }
 

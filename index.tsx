@@ -13,10 +13,11 @@ import { NameForm } from './Forms/NameForm'
 import { EssayForm } from './Forms/EssayForm'
 import { FlavorForm } from './Forms/FlavorForm'
 import { Reservation } from './Forms/Reservation'
+import { Calculator } from './Calculator'
 
 function App() {
     return (
-        <Reservation />
+        <Calculator />
     )
 }
 

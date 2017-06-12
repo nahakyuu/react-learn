@@ -1,22 +1,21 @@
 import * as React from 'react'
 
-interface BoilingProp {
-    celsius: number
+const scaleNames = {
+    c: 'Celsius',
+    f: 'Fahrenheit'
 }
 
-interface CalculatorState {
+type ScaleName = keyof typeof scaleNames
+
+interface TemperatureInputProp {
+    scale: ScaleName
+}
+
+interface TemperatureInputState {
     temperature: string
 }
-
-function BoilingVerdict(props: BoilingProp) {
-    if (props.celsius >= 100) {
-        return <p>The water would boil.</p>
-    }
-    return <p>The water would not boil.</p>
-}
-
-export class Calculator extends React.Component<{}, CalculatorState> {
-    constructor(props: {}) {
+export class TemperatureInput extends React.Component<TemperatureInputProp, TemperatureInputState> {
+    constructor(props: TemperatureInputProp) {
         super(props)
         this.state = { temperature: '' }
     }
@@ -27,14 +26,28 @@ export class Calculator extends React.Component<{}, CalculatorState> {
 
     render() {
         const temperature = this.state.temperature
+        const scale = this.props.scale
         return (
             <fieldset>
-                <legend>Enter temperature in Celsius:</legend>
+                <legend>Enter temperature in {scaleNames[scale]}:</legend>
                 <input type="text"
                     value={temperature}
                     onChange={this.handleChange} />
-                <BoilingVerdict celsius={parseFloat(temperature)} />
             </fieldset>
+        )
+    }
+}
+
+export class Calculator extends React.Component<{}, {}> {
+    render() {
+        return (
+            <div>
+                {
+                    Object.keys(scaleNames).map((scale: ScaleName) =>
+                        <TemperatureInput scale={scale} />
+                    )
+                }
+            </div>
         )
     }
 }

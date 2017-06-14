@@ -15,10 +15,22 @@ import { FlavorForm } from './Forms/FlavorForm'
 import { Reservation } from './Forms/Reservation'
 import { Calculator } from './Calculator'
 import { WelcomeDialog } from './WelcomeDialog'
+import { SplitPane } from './SplitPane'
+
+function Contacts() {
+    return <div className="Contacts" />;
+}
+
+function Chat() {
+    return <div className="Chat" />;
+}
 
 function App() {
     return (
-        <WelcomeDialog />
+        <SplitPane
+            left={<Contacts />}
+            right={<Chat />}
+        />
     )
 }
 

@@ -14,10 +14,11 @@ import { EssayForm } from './Forms/EssayForm'
 import { FlavorForm } from './Forms/FlavorForm'
 import { Reservation } from './Forms/Reservation'
 import { Calculator } from './Calculator'
+import { WelcomeDialog } from './WelcomeDialog'
 
 function App() {
     return (
-        <Calculator />
+        <WelcomeDialog />
     )
 }
 

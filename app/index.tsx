@@ -27,10 +27,7 @@ function Chat() {
 
 function App() {
     return (
-        <SplitPane
-            left={<Contacts />}
-            right={<Chat />}
-        />
+        <WelcomeDialog />
     )
 }
 

@@ -17,18 +17,11 @@ import { Calculator } from './Calculator'
 import { WelcomeDialog } from './WelcomeDialog'
 import { SplitPane } from './SplitPane'
 import { SignUpDialog } from './SignUpDialog'
-
-function Contacts() {
-    return <div className="Contacts" />;
-}
-
-function Chat() {
-    return <div className="Chat" />;
-}
+import { FilterableProductTable } from './FilterableProductTable'
 
 function App() {
     return (
-        <SignUpDialog />
+        <FilterableProductTable />
     )
 }
 

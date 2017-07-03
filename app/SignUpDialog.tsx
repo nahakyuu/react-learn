@@ -15,7 +15,7 @@ export class SignUpDialog extends React.Component<{}, { login: string }> {
                     onChange={this.handleChange} />
                 <button onClick={this.handleSignUp}>
                     Sign Me Up!
-                    </button>
+                </button>
             </Dialog>
         )
     }

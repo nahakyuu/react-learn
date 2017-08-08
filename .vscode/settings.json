@@ -9,5 +9,6 @@
         "**/*.js": { "when": "$(basename).ts" },
         "**/**.js": { "when": "$(basename).tsx" },
         "**/*.map": { "when": "$(basename)" }
-    }
+    },
+    "typescript.tsdk": "./node_modules/typescript/lib"
 }

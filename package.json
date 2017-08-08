@@ -6,9 +6,11 @@
     "email": "root@aroa.me"
   },
   "scripts": {
+    "build": "tsc",
     "watch": "tsc -w",
     "serve": "lite-server",
-    "start": "npm-run-all -p watch serve"
+    "dev": "npm-run-all -p watch serve",
+    "start": "npm-run-all -p build serve"
   },
   "dependencies": {
     "react": "^15.5.4",

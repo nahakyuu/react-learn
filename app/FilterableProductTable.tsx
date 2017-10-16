@@ -108,7 +108,7 @@ class ProductTable extends React.Component<ProductTableProp, {}> {
     }
 }
 
-interface FilterableProductTableState {
+export interface FilterableProductTableState {
     filterText: string
     inStockOnly: boolean
 }

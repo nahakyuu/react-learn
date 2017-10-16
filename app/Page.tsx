@@ -4,7 +4,7 @@ interface WarningProp {
     warn: boolean
 }
 
-interface PageState {
+export interface PageState {
     showWarning: boolean
 }
 

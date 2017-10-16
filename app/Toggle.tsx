@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-interface ToggleState {
+export interface ToggleState {
     isToggleOn: boolean
 }
 

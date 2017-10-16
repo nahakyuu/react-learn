@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-const scaleNames = {
+export const scaleNames = {
     c: 'Celsius',
     f: 'Fahrenheit'
 }
@@ -37,17 +37,17 @@ function tryConvert(temperature: string, convert: IConvert) {
     return rounded.toString()
 }
 
-type ScaleName = keyof typeof scaleNames
+export type ScaleName = keyof typeof scaleNames
 
-type TemperatureChangeEventHandler = (temperature: string) => void
+export type TemperatureChangeEventHandler = (temperature: string) => void
 
-interface TemperatureInputProp {
+export interface TemperatureInputProp {
     scale: ScaleName
     temperature: string
     onTemperauureceChange: TemperatureChangeEventHandler
 }
 
-interface TemperatureInputState {
+export interface TemperatureInputState {
     temperature: string
 }
 
@@ -75,7 +75,7 @@ export class TemperatureInput extends React.Component<TemperatureInputProp, Temp
     }
 }
 
-interface CalculatorState {
+export interface CalculatorState {
     temperature: string
     scale: ScaleName
 }

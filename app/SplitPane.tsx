@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-interface SplitPaneProp {
+export interface SplitPaneProp {
     left: React.ReactNode
     right: React.ReactNode
 }

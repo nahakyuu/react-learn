@@ -1,10 +1,10 @@
 import * as React from 'react'
 
-interface DateProp {
+export interface DateProp {
     date: Date
 }
 
-type DateState = DateProp
+export type DateState = DateProp
 
 function FormattedDate(props: DateProp) {
     return <h2>It is {props.date.toLocaleTimeString()}</h2>

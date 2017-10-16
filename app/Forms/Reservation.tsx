@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-interface ReservationState {
+export interface ReservationState {
     isGoing: boolean
     numberOfGuests: number | string
     [index: string]: number | string | boolean
